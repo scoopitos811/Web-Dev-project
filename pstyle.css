@@ -1,0 +1,188 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+header {
+  width: 100vw;
+  min-height: 100vh;
+  background: linear-gradient(#01497C, #01497C, #01497C);
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background: white;
+  max-width: 800px;
+  min-height: 500px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0.5rem 1.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  animation: slideIn 0.6s ease-out;
+}
+
+.left,
+.right {
+  flex-basis: 50%;
+}
+
+form {
+  padding: 1rem;
+}
+
+h3 {
+  margin-top: 1rem;
+  color: #2c3e50;
+}
+
+form input[type="text"],
+#zip input[type="number"],
+#zip select {
+  width: 100%;
+  padding: 0.5rem 0.7rem;
+  margin: 0.5rem 0;
+  outline: none;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s;
+}
+
+form input[type="text"]:focus,
+#zip input[type="number"]:focus,
+#zip select:focus {
+  border-color: #01497C;
+}
+
+form input:hover {
+  background: #f5f5f5;
+}
+
+#zip {
+  display: flex;
+  margin-top: 0.5rem;
+}
+
+#zip select {
+  padding: 0.5rem 0.7rem;
+}
+
+#zip input[type="number"] {
+  padding: 0.5rem 0.7rem;
+  margin-left: 5px;
+}
+
+input[type="submit"] {
+  width: 100%;
+  padding: 0.7rem 1.5rem;
+  background: #01497C;
+  color: white;
+  border: none;
+  outline: none;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+/* input[type="submit"]:hover {
+  transform: translateY(-3px);
+  background: #2c3e50;
+} */
+
+input[type="submit"] {
+  width: 100%;
+  padding: 0.7rem 1.5rem;
+  background: #01497C;
+  color: white;
+  border: none;
+  outline: none;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+input[type="submit"]:hover {
+  background: #2c3e50; /* Optional hover effect */
+}
+
+form img {
+  border-radius: 5px;
+  margin: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Modal Styling */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dim background */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  animation: slideIn 0.4s ease-out;
+}
+
+.modal-content img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 1rem;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: #2c3e50;
+  z-index: 1001; /* Ensure it's above other modal content */
+  visibility: visible; /* Ensure visibility is always on */
+}
+
+.close:hover {
+  color: #e74c3c; /* Add a hover effect for better UX */
+}
+
+@media only screen and (max-width: 770px) {
+  .container {
+    flex-direction: column;
+  }
+  body {
+    overflow-x: hidden;
+  }
+  #zip {
+    flex-direction: column;
+  }
+  #zip input,
+  #zip select {
+    margin: 0.5rem 0 0;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

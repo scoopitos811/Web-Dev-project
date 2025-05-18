@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Payment Gateway</title>
+    <link rel="stylesheet" type="text/css" href="pstyle.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="left">
+          <h3><i class="fas fa-address-card"></i> BILLING ADDRESS</h3>
+          <form id="billingForm">
+            <label>
+              <i class="fas fa-user"></i> Full name
+              <input
+                type="text"
+                id="fullName"
+                placeholder="Enter name"
+                aria-label="Full Name"
+              />
+            </label>
+            <label>
+              <i class="fas fa-envelope"></i> Email
+              <input
+                type="text"
+                id="email"
+                placeholder="Enter email"
+                aria-label="Email"
+              />
+            </label>
+            <label>
+              <i class="fas fa-map-marker-alt"></i> Address
+              <input
+                type="text"
+                id="address"
+                placeholder="Enter address"
+                aria-label="Address"
+              />
+            </label>
+            <label>
+              <i class="fas fa-city"></i> City
+              <input
+                type="text"
+                id="city"
+                placeholder="Enter city"
+                aria-label="City"
+              />
+            </label>
+            <div id="zip">
+              <label>
+                <i class="fas fa-flag"></i> State
+                <select id="state" aria-label="State">
+                  <option>Choose State...</option>
+                  <option>Gujarat</option>
+                  <option>Delhi</option>
+                  <option>Bihar</option>
+                  <option>Maharashtra</option>
+                  <option>Rajasthan</option>
+                  <option>Hariyana</option>
+                  <option>Uttar Pradesh</option>
+                  <option>Madhya Pradesh</option>
+                </select>
+              </label>
+              <label>
+                <i class="fas fa-map-pin"></i> Zip code
+                <input
+                  type="number"
+                  id="zipCode"
+                  placeholder="Zip code"
+                  aria-label="Zip Code"
+                />
+              </label>
+            </div>
+          </form>
+        </div>
+        <div class="right">
+          <h3><i class="fas fa-credit-card"></i> PAYMENT</h3>
+          <form id="paymentForm">
+            <p>Accepted Cards</p>
+            <img src="pimage/card1.png" width="100" alt="Card 1" />
+            <img src="pimage/card2.png" width="50" alt="Card 2" />
+            <img
+              src="pimage/icon1.png"
+              width="50"
+              alt="G-Pay"
+              id="gPayImage"
+              style="cursor: pointer"
+            />
+            <br /><br />
+            <label>
+              <i class="fas fa-credit-card"></i> Credit card number
+              <input
+                type="text"
+                id="cardNumber"
+                placeholder="Enter card number"
+                aria-label="Credit Card Number"
+              />
+            </label>
+            <label>
+              <i class="fas fa-calendar-alt"></i> Exp month
+              <input
+                type="text"
+                id="expMonth"
+                placeholder="Enter Month"
+                aria-label="Expiration Month"
+              />
+            </label>
+            <div id="zip">
+              <label>
+                <i class="fas fa-calendar"></i> Exp year
+                <select id="expYear" aria-label="Expiration Year">
+                  <option>Choose Year...</option>
+                  <option>2024</option>
+                  <option>2025</option>
+                  <option>2026</option>
+                  <option>2027</option>
+                </select>
+              </label>
+              <label>
+                <i class="fas fa-lock"></i> CVV
+                <input
+                  type="number"
+                  id="cvv"
+                  placeholder="CVV"
+                  aria-label="CVV"
+                />
+              </label>
+            </div>
+          </form>
+          <input
+            type="submit"
+            name="checkout"
+            value="Proceed to Checkout"
+            style="
+              width: 100%;
+              padding: 0.7rem 1.5rem;
+              background: #01497C;
+              color: white;
+              border: none;
+              outline: none;
+              margin-top: 1rem;
+              cursor: pointer;
+            "
+            onclick="validateForm()"
+          />
+        </div>
+      </div>
+    </header>
+
+    <!-- QR Code Modal -->
+    <div id="qrModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Scan QR Code with G-Pay</h3>
+        <img src="pimage/gpay-qr.jpg" alt="G-Pay QR Code" width="200" />
+      </div>
+    </div>
+
+    <script>
+      function validateForm() {
+        const fullName = document.getElementById("fullName").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const address = document.getElementById("address").value.trim();
+        const city = document.getElementById("city").value.trim();
+        const state = document.getElementById("state").value.trim();
+        const zipCode = document.getElementById("zipCode").value.trim();
+        const cardNumber = document.getElementById("cardNumber").value.trim();
+        const expMonth = document.getElementById("expMonth").value.trim();
+        const expYear = document.getElementById("expYear").value.trim();
+        const cvv = document.getElementById("cvv").value.trim();
+
+        if (
+          !fullName ||
+          !email ||
+          !address ||
+          !city ||
+          !state ||
+          !zipCode ||
+          !cardNumber ||
+          !expMonth ||
+          !expYear ||
+          !cvv
+        ) {
+          alert("Please fill in all the required fields.");
+          return;
+        }
+
+        setTimeout(() => {
+          window.location.href = "success.html";
+        }, 1000);
+      }
+
+      // QR Code Modal Logic
+      const gPayImage = document.getElementById("gPayImage");
+      const qrModal = document.getElementById("qrModal");
+      const closeBtn = document.querySelector(".close");
+
+      // Show the modal when the G-Pay image is clicked
+      gPayImage.addEventListener("click", () => {
+        qrModal.style.display = "flex"; // Show modal
+        qrModal.style.opacity = "1"; // Ensure full opacity
+      });
+
+      // Close the modal when the 'X' button is clicked
+      closeBtn.addEventListener("click", () => {
+        qrModal.style.display = "none";
+      });
+
+      // Close the modal when clicking outside of it
+      window.addEventListener("click", (event) => {
+        if (event.target === qrModal) {
+          qrModal.style.display = "none";
+        }
+      });
+    </script>
+  </body>
+</html>
