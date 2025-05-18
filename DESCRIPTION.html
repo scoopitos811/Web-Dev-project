@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>University Clubs</title>
+  <link rel="stylesheet" href="dstyles.css">
+</head>
+<body>
+  <header class="header">
+    <h1>Our Clubs</h1>
+  </header>
+
+  <main class="club-container">
+    <div class="club-card" onclick="showDetails('robotics')">
+      <img src="dimages/robotics.jpg" alt="Robotics Club">
+      <h2>Robotics Club</h2>
+      <p>Innovate and create cutting-edge robots!</p>
+    </div>
+    <div class="club-card" onclick="showDetails('cultural')">
+      <img src="dimages/culture.jpg" alt="Cultural Club">
+      <h2>Cultural Club</h2>
+      <p>Celebrate diversity and traditions!</p>
+    </div>
+    <div class="club-card" onclick="showDetails('music')">
+      <img src="dimages/music.jpg" alt="Music Club">
+      <h2>Music Club</h2>
+      <p>Unleash your musical talent!</p>
+    </div>
+    <div class="club-card" onclick="showDetails('environment')">
+      <img src="dimages/environment.jpg" alt="Environment Club">
+      <h2>Environment Club</h2>
+      <p>Make a difference for our planet!</p>
+    </div>
+    <div class="club-card" onclick="showDetails('technical')">
+      <img src="dimages/technical.jpg" alt="Technical Club">
+      <h2>Technical Club</h2>
+      <p>Learn and apply technical skills!</p>
+    </div>
+    <div class="club-card" onclick="showDetails('sports')">
+      <img src="dimages/sports.jpg" alt="Sports Club">
+      <h2>Sports Club</h2>
+      <p>Stay active and competitive!</p>
+    </div>
+  </main>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2 id="modal-title"></h2>
+      <p id="modal-description"></p>
+    </div>
+  </div>
+
+  <script src="dscript.js"></script>
+</body>
+</html>
