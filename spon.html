@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JG clubs or events Sponsorship</title>
+  <style>
+/* General reset and body styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9; /* Light background for contrast */
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header styling */
+.header {
+  background-color: #012A4A; /* Deep blue header */
+  color: white;
+  text-align: center;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+/* Main content section */
+.main-content {
+  padding: 40px;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: white;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  transform: scale(1);
+  transition: transform 0.3s ease;
+}
+
+.main-content:hover {
+  transform: scale(1.02);
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #013A63; /* Slightly lighter blue for the heading */
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+/* Why Sponsor Section */
+.why-sponsor {
+  background-color: #f9f9f9;
+  padding: 30px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.why-sponsor h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #013A63;
+  text-align: center;
+}
+
+.why-sponsor ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.why-sponsor li {
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  color: #01497C;
+}
+
+.why-sponsor li::before {
+  content: "✔️";
+  margin-right: 10px;
+  color: #2A6F97;
+}
+
+/* Form container */
+.form-container {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.form-container:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+  font-size: 1.1rem;
+  display: block;
+  margin-bottom: 10px;
+  color: #01497C; /* Darker blue for label text */
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 15px;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+  transition: border-color 0.3s ease, transform 0.2s ease;
+}
+
+input[type="text"], input[type="email"], select {
+  background-color: #f9f9f9;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #014F86; /* Blue border on focus */
+  transform: scale(1.02);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+button {
+  background-color: #01497C; /* Soft blue for the button */
+  color: white;
+  font-size: 1.2rem;
+  border: none;
+  padding: 12px 20px;
+  cursor: pointer;
+  border-radius: 8px;
+  width: 100%;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #2C7DA0; /* Slightly lighter blue on hover */
+  transform: translateY(-3px);
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+/* Success message */
+.hidden {
+  display: none;
+}
+
+#successMessage {
+  background-color: #89C2D9; /* Light blue success message */
+  color: #155724;
+  border: 1px solid #A9D6E5; /* Lighter blue border */
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+/* Footer styling */
+.footer {
+  background-color: #01497C; /* Same darker blue as labels */
+  color: white;
+  text-align: center;
+  padding: 15px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  font-size: 1rem;
+}
+
+.footer p {
+  margin: 0;
+}
+
+/* Responsive design for mobile */
+@media screen and (max-width: 768px) {
+  .main-content {
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  button {
+    font-size: 1.1rem;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <header class="header">
+    <h1>JG clubs or events Sponsorship Page</h1>
+  </header>
+  <main class="main-content">
+    
+    <!-- Why You Should Sponsor Section -->
+    <section class="why-sponsor">
+      <h3>Why You Should Sponsor JG University Clubs</h3>
+      <ul>
+        <li>Gain exposure to a vibrant and diverse student community.</li>
+        <li>Support the growth and development of student talents and initiatives.</li>
+        <li>Increase your brand's visibility at university events and online.</li>
+        <li>Contribute to building a positive, active, and engaging campus culture.</li>
+        <li>Benefit from marketing opportunities across multiple student-run channels.</li>
+        <li>Be a part of impactful events that resonate with future leaders.</li>
+      </ul>
+    </section>
+
+    <section class="form-container">
+      <h2>Support Our Clubs and Events</h2>
+      <form id="sponsorshipForm">
+        <div class="form-group">
+          <label for="name">Your Name/organization:</label>
+          <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Your Email:</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+        <div class="form-group">
+          <label for="clubOrEvent">Club/Event to Sponsor:</label>
+          <select id="clubOrEvent" name="clubOrEvent" required>
+            <option value="" disabled selected>Select an option</option>
+            <option value="sports">Sports Club</option>
+            <option value="music">Music Club</option>
+            <option value="coding">Coding Club</option>
+            <option value="cultural">Cultural Events</option>
+            <option value="JG Y.C.F">Freshers Event</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Your Message/Inquiry:</label>
+          <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+      <div id="successMessage" class="hidden">Thank you for your support! We will get in touch soon.</div>
+    </section>
+  </main>
+  <footer class="footer">
+    <p>© 2024 JG University Clubs</p>
+  </footer>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("sponsorshipForm");
+  const successMessage = document.getElementById("successMessage");
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent the form from reloading the page
+    
+    // Add a smooth fade-in effect for the success message
+    successMessage.classList.remove("hidden");
+    successMessage.style.opacity = 0;
+    let opacity = 0;
+    const fadeIn = setInterval(function () {
+      opacity += 0.1;
+      successMessage.style.opacity = opacity;
+      if (opacity >= 1) {
+        clearInterval(fadeIn);
+      }
+    }, 50);
+
+    // Reset the form fields after submission
+    form.reset();
+  });
+});
+  </script>
+</body>
+</html>
